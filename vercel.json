@@ -1,15 +1,5 @@
 {
     "version": 2,
-    "builds": [
-        {
-            "src": "Gemfile",
-            "use": "@vercel/ruby",
-            "config": {
-                "installCommand": "bundle install",
-                "buildCommand": "bundle exec jekyll build"
-            }
-        }
-    ],
     "routes": [
         {
             "src": "/zsh_history",
