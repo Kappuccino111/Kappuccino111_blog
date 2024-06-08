@@ -1,0 +1,35 @@
+{
+    "version": 2,
+    "builds": [
+        {
+            "src": "index.html",
+            "use": "@vercel/static"
+        },
+        {
+            "src": "zsh_history.md",
+            "use": "@vercel/static"
+        },
+        {
+            "src": "_posts/**/*.md",
+            "use": "@vercel/static"
+        },
+        {
+            "src": "_site/**/*",
+            "use": "@vercel/static"
+        }
+    ],
+    "routes": [
+        {
+            "src": "/zsh_history",
+            "dest": "/zsh_history.md"
+        },
+        {
+            "src": "/posts/:slug",
+            "dest": "/_posts/:slug.md"
+        },
+        {
+            "src": "/(.*)",
+            "dest": "/_site/$1"
+        }
+    ]
+}

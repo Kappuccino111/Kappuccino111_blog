@@ -21,7 +21,7 @@ defaults:
 collections:
   posts:
     output: true
-    permalink: /:title
+    permalink: /:title/
 
 sass:
   sass_dir: _sass
