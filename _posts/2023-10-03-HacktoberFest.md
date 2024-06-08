@@ -3,7 +3,7 @@ layout: posts
 title: IIT Mandi Students🧑‍💻- Let's Fortify Our OpenSource Armour, Together! 🔥💪
 date: 2023-10-03
 tags: [HacktoberFest 2023, OpenSource, IIT Mandi]
-excerpt: This is my third post on this blog.
+excerpt: CodeForge HacktoberFest for IIT Mandi
 ---
 
 Hey there, budding coders and OpenSource enthusiasts of IIT Mandi! 🚀
