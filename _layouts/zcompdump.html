@@ -1,0 +1,49 @@
+---
+layout: default
+---
+
+<div class="centered">
+<pre>
+████████╗███████╗░█████╗░██╗░░██╗  ░░░░░██╗░█████╗░██████╗░░██████╗░░█████╗░███╗░░██╗
+╚══██╔══╝██╔════╝██╔══██╗██║░░██║  ░░░░░██║██╔══██╗██╔══██╗██╔════╝░██╔══██╗████╗░██║
+░░░██║░░░█████╗░░██║░░╚═╝███████║  ░░░░░██║███████║██████╔╝██║░░██╗░██║░░██║██╔██╗██║
+░░░██║░░░██╔══╝░░██║░░██╗██╔══██║  ██╗░░██║██╔══██║██╔══██╗██║░░╚██╗██║░░██║██║╚████║
+░░░██║░░░███████╗╚█████╔╝██║░░██║  ╚█████╔╝██║░░██║██║░░██║╚██████╔╝╚█████╔╝██║░╚███║
+░░░╚═╝░░░╚══════╝░╚════╝░╚═╝░░╚═╝  ░╚════╝░╚═╝░░╚═╝╚═╝░░╚═╝░╚═════╝░░╚════╝░╚═╝░░╚══╝
+</pre>
+<br>
+<div class="check">Don't try to understand</div>
+</div>
+
+
+<h2>ls .zcompdump/</h2>
+<ul>
+    {% for post in paginator.posts %}
+     <li>
+        <a href="{{ site.baseurl }}{{ post.url }}"><strong class="pageheader">{{ post.title }}</strong></a>
+        <p>{{ post.excerpt }}</p>
+    </li>
+    {% endfor %}
+</ul>
+
+<div class="pagination">
+    {% if paginator.previous_page %}
+    <a href="{{ site.baseurl }}{{ paginator.previous_page_path }}" class="previous">&laquo; Previous</a>
+    {% endif %}
+
+    {% for page in (1..paginator.total_pages) %}
+    {% if page == paginator.page %}
+    <em>{{ page }}</em>
+    {% else %}
+    {% if page == 1 %}
+    <a href="{{ site.baseurl }}/zcompdump/" class="page">{{ page }}</a>
+    {% else %}
+    <a href="{{ site.baseurl }}/zcompdump/page{{ page }}" class="page">{{ page }}</a>
+    {% endif %}
+    {% endif %}
+    {% endfor %}
+
+    {% if paginator.next_page %}
+    <a href="{{ site.baseurl }}{{ paginator.next_page_path }}" class="next">Next &raquo;</a>
+    {% endif %}
+</div>

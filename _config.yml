@@ -1,0 +1,38 @@
+title: Kappuccino111
+baseurl: ""
+url: ""
+
+github_username: kappuccino111
+linkedin_username: akarshan111
+
+plugins:
+  - jekyll-paginate
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-picture-tag
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "default"
+
+collections:
+  posts:
+    output: true
+    permalink: /:title
+
+sass:
+  sass_dir: _sass
+  style: compressed
+
+paginate: 3
+paginate_path: "/zcompdump/page:num/"
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: "highlight"

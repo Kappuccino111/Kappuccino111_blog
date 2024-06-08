@@ -1,0 +1,14 @@
+<br>
+<footer>
+    {% assign current_url = page.url %}
+    {% if current_url contains '.html' %}
+    {% assign current_url = current_url | remove: '.html' %}
+    {% endif %}
+    <p>~$pwd:{{ current_url }}</p>
+    <ul>
+        <li><a href="https://github.com/{{ site.github_username }}" target="_blank"><i class="fa fa-github"></i>
+                GitHub</a></li>
+        <li><a href="https://linkedin.com/in/{{ site.linkedin_username }}" target="_blank"><i
+                    class="fa fa-linkedin"></i> LinkedIn</a></li>
+    </ul>
+</footer>

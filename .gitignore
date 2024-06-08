@@ -1,0 +1,9 @@
+_site/
+.jekyll-cache/
+.sass-cache/
+_secret.yml
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.vscode/
