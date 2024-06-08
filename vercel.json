@@ -3,11 +3,11 @@
     "routes": [
         {
             "src": "/zsh_history",
-            "dest": "/zsh_history.md"
+            "dest": "/zsh_history.html"
         },
         {
             "src": "/posts/:slug",
-            "dest": "/_posts/:slug.md"
+            "dest": "/:slug/index.html"
         },
         {
             "src": "/(.*)",
