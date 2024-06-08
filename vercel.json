@@ -4,10 +4,6 @@
         {
             "src": "/zsh_history",
             "dest": "/zsh_history.html"
-        },
-        {
-            "src": "/(.*)",
-            "dest": "/_site/$1"
         }
     ]
 }
