@@ -21,7 +21,7 @@ defaults:
 collections:
   posts:
     output: true
-    permalink: /:year/:month/:day/:slug:output_ext
+    permalink: /:year/:month/:day/:slug.html
 
 sass:
   sass_dir: _sass

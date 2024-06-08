@@ -6,10 +6,6 @@
             "dest": "/zsh_history.html"
         },
         {
-            "src": "/posts/:slug",
-            "dest": "/:slug/index.html"
-        },
-        {
             "src": "/(.*)",
             "dest": "/_site/$1"
         }
