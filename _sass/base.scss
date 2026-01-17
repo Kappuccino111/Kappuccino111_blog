@@ -55,14 +55,14 @@ header h1:hover {
 }
 
 .caret {
-  display: inline-block;
-  width: 0.8em;
-  height: 4px;
-  background-color: $accent-color;
-  margin-top: 20px;
-  margin-left: 5px;
-  position: absolute;
+  display: inline;
+  color: $accent-color;
+  font-weight: bold;
   animation: blink 1s infinite;
+}
+
+.caret::after {
+  content: "_";
 }
 
 @keyframes blink {
