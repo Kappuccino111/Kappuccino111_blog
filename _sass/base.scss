@@ -27,12 +27,34 @@ body {
 
 .centered {
   text-align: center;
-  color: #EB6947;
+  animation: colorCycle 1s ease-in-out infinite;
+}
+
+.centered2 {
+  text-align: center;
+  color: $hover-color;
+}
+
+@keyframes colorCycle {
+
+  0%,
+  100% {
+    color: #ffffff;
+  }
+
+  33% {
+    color: #ffd700;
+  }
+
+  66% {
+    color: #00ff41;
+  }
 }
 
 .check {
   font-family: 'Inconsolata', monospace;
   font-size: x-large;
+  color: $hover-color;
 }
 
 header {
