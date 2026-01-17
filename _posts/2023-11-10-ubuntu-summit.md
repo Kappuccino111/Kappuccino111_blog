@@ -29,6 +29,7 @@ Join me on an exhilarating expedition as we delve into the Ubuntu Summit 2023, a
 _The adventure kicks off at Mumbai Airport, buzzing with the energy of beginnings and goodbyes. Here I am, amidst travellers, all embarking on their own journeys, while I set off on mine to the Ubuntu Summit 2023 – a gathering of minds and innovation._
 
 ![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/yjpuloc72cnol6zi26us.png)
+
 **2. Welcome to Paris Aeroport**
 
 _A brief touchdown in the City of Lights – Paris. Stepping off the plane, I was greeted by the iconic welcome sign at Paris Aeroport, a fleeting yet memorable pitstop on this exhilarating journey to Riga._

@@ -1,9 +1,18 @@
+$bg-color: #1e1e1e;
+$header-bg: #252526;
+$text-color: #f0e68c;
+$accent-color: #ffd700;
+$border-color: #ffd700;
+$code-bg: #121212;
+$link-color: #ffd700;
+$hover-color: #ffffff;
+
 body {
   font-family: 'Cascadia Code', Courier, monospace;
-  font-size: medium;
-  background-color: #08101D;
+  font-size: larger;
+  background-color: $bg-color;
   text-align: justify;
-  color: #5EB2F9;
+  color: $text-color;
   margin: 0;
   padding: 0;
 }
@@ -25,9 +34,9 @@ body {
 }
 
 header {
-  background-color: #102737;
+  background-color: $header-bg;
   padding: 15px;
-  border-bottom: 2px solid #FF6441;
+  border-bottom: 2px solid $border-color;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -36,18 +45,18 @@ header {
 
 header h1 {
   font-size: 1.5em;
-  color: #86EFFF;
+  color: $accent-color;
 }
 
 header h1:hover {
-  text-shadow: 0 0 5px #ff006a, 0 0 20px #ff006a;
+  text-shadow: 0 0 5px $accent-color, 0 0 20px $accent-color;
 }
 
 .caret {
   display: inline-block;
   width: 0.8em;
   height: 4px;
-  background-color: #86EFFF;
+  background-color: $accent-color;
   margin-top: 20px;
   margin-left: 5px;
   position: absolute;
@@ -79,13 +88,13 @@ nav li {
 }
 
 nav a {
-  color: #FF9369;
+  color: $text-color;
   text-decoration: none;
   font-size: 1.2em;
 }
 
 nav a:hover {
-  color: #FF6441;
+  color: $hover-color;
   text-decoration: underline;
   text-underline-offset: 0.4em;
   background-color: #000000;
@@ -93,9 +102,9 @@ nav a:hover {
 
 
 footer {
-  background-color: #102737;
+  background-color: $header-bg;
   padding: 15px;
-  border-top: 2px solid #FF6441;
+  border-top: 2px solid $border-color;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -103,7 +112,7 @@ footer {
 
 footer p {
   font-size: 1em;
-  color: #86EFFF;
+  color: $text-color;
   margin: 0;
 }
 
@@ -121,13 +130,13 @@ footer li {
 }
 
 footer a {
-  color: #FF9369;
+  color: $accent-color;
   text-decoration: none;
   font-size: 1em;
 }
 
 footer a:hover {
-  color: #FF6441;
+  color: $hover-color;
   text-decoration: underline;
   text-underline-offset: 0.4em;
   background-color: #000000;
@@ -144,14 +153,14 @@ footer a:hover {
   padding: 5px 10px;
   font-weight: bold;
   background-color: #000000;
-  color: #FF9369;
+  color: $link-color;
   border-radius: 3px;
   font-family: 'Courier New', Courier, monospace;
 }
 
 .pagination a:hover {
   font-weight: bolder;
-  color: #00ff91;
+  color: $hover-color;
   text-decoration: underline;
 }
 
@@ -160,36 +169,37 @@ footer a:hover {
   padding: 5px 10px;
   border-radius: 3px;
   font-family: 'Courier New', Courier, monospace;
-  background-color: #000000;
-  color: #00ff91;
+  background-color: $accent-color;
+  color: #000000;
   font-weight: bolder;
-  text-decoration: underline;
+  font-style: normal;
+  border: 2px solid $accent-color;
 }
 
 .pagination .previous,
 .pagination .next {
   font-weight: bold;
-  color: #FF9369;
+  color: $link-color;
   transition: color 1s, background-color 1s, underline 1s;
 }
 
 .pagination .previous:hover,
 .pagination .next:hover {
-  background-color: #FF9369;
+  background-color: $link-color;
   text-decoration: underline;
   color: #000000;
 }
 
 code {
-  background-color: #102737;
-  color: #95ff00;
+  background-color: $code-bg;
+  color: $accent-color;
   padding: 2px 4px;
   border-radius: 3px;
   font-family: 'Courier New', Courier, monospace;
 }
 
 .highlight {
-  background-color: #282c34;
+  background-color: $code-bg;
   border-radius: 10px;
   padding: 16px;
   overflow: auto;
@@ -320,35 +330,33 @@ code {
 
 
 h1 {
-  color: #E0D9C7;
+  color: $accent-color;
 }
 
 h2 {
-  color: #00ff91;
+  color: $accent-color;
 }
 
 h3 {
-  color: #ffff00;
+  color: $accent-color;
 }
 
-h4
-{
-  color: #ffcdb4;
+h4 {
+  color: $accent-color;
 }
 
-h5
-{
-  color: #ff0000;
+h5 {
+  color: $accent-color;
 }
 
 a {
-  color: #FF9369;
+  color: $link-color;
   text-decoration: none;
   transition: background-color 1s, color 1s, text-decoration 1s;
 }
 
 a:hover {
-  color: #977fff;
+  color: $hover-color;
   text-decoration-line: underline;
   background-color: #000000;
 }
@@ -384,4 +392,5 @@ img {
   max-width: 70%;
   height: auto;
   margin: 0 auto;
+  border: 1px solid $accent-color;
 }

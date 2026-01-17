@@ -27,8 +27,8 @@ sass:
   sass_dir: _sass
   style: compressed
 
-paginate: 3
-paginate_path: "/zcompdump/page:num/"
+paginate: 1
+paginate_path: "/zsh_history/page:num/"
 
 markdown: kramdown
 kramdown:

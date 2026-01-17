@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
 gem 'jekyll'
-gem 'jekyll-sass-converter'
+gem 'sassc'
 gem 'minima'
 gem 'jekyll-paginate'
 gem 'jekyll-feed'
@@ -11,3 +11,5 @@ gem 'base64'
 gem 'jekyll-picture-tag'
 gem 'kramdown-parser-gfm'
 gem 'webrick'
+gem 'logger'
+gem 'bigdecimal'
