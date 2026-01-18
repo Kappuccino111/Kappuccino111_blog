@@ -166,6 +166,18 @@ footer a:hover {
   background-color: #000000;
 }
 
+footer a.icon-link {
+  color: $accent-color;
+  text-decoration: none;
+}
+
+footer a.icon-link:hover {
+  color: $hover-color;
+  text-decoration: none;
+  background-color: transparent;
+  transition: all 0.2s ease;
+}
+
 .pagination {
   display: flex;
   justify-content: center;
