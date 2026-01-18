@@ -4,6 +4,7 @@ url: "https://www.kappuccino111.com/"
 
 github_username: kappuccino111
 linkedin_username: akarshan111
+email: root@kappuccino111.com
 
 plugins:
   - jekyll-paginate-v2
