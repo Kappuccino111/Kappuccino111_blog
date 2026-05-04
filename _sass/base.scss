@@ -392,6 +392,49 @@ h5 {
   color: $accent-color;
 }
 
+strong, b {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+em, i {
+  color: #ffd580;
+  font-style: italic;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1em;
+}
+
+th {
+  background-color: $header-bg;
+  color: $accent-color;
+  font-weight: 700;
+  padding: 8px 12px;
+  border: 1px solid $border-color;
+  text-align: left;
+}
+
+td {
+  padding: 8px 12px;
+  border: 1px solid #333;
+  color: $text-color;
+}
+
+blockquote {
+  margin: 1.5em 0;
+  padding: 0.5em 1.2em;
+  border-left: 4px solid $accent-color;
+  color: #e8dcc8;
+  font-style: italic;
+}
+
+blockquote p:last-child {
+  margin-bottom: 0;
+}
+
 a {
   color: $link-color;
   text-decoration: none;
