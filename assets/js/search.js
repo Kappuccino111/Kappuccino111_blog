@@ -14,6 +14,7 @@ layout: null
     let searchIndex = [];
     let debounceTimer;
     let isOpen = false;
+    let selectedIndex = -1;
 
 
     const BASE_URL = '{{ site.baseurl }}' || '';
@@ -90,7 +91,20 @@ layout: null
                 </a>
             `).join('');
         }
+        selectedIndex = -1;
         searchResults.style.display = 'block';
+    }
+
+
+    function updateSelection() {
+        if (!searchResults) return;
+        const items = searchResults.querySelectorAll('.search-result-item');
+        items.forEach((item, index) => {
+            item.classList.toggle('keyboard-selected', index === selectedIndex);
+        });
+        if (items[selectedIndex]) {
+            items[selectedIndex].scrollIntoView({ block: 'nearest' });
+        }
     }
 
 
@@ -164,6 +178,26 @@ layout: null
             if (e.key === 'Escape' && isOpen) {
                 e.preventDefault();
                 closeModal();
+            }
+
+            if (!isOpen) return;
+
+            const items = searchResults ? searchResults.querySelectorAll('.search-result-item') : [];
+            if (!items.length) return;
+
+            if (e.key === 'ArrowDown') {
+                e.preventDefault();
+                selectedIndex = (selectedIndex + 1) % items.length;
+                updateSelection();
+            } else if (e.key === 'ArrowUp') {
+                e.preventDefault();
+                selectedIndex = (selectedIndex - 1 + items.length) % items.length;
+                updateSelection();
+            } else if (e.key === 'Enter') {
+                if (selectedIndex >= 0 && items[selectedIndex]) {
+                    e.preventDefault();
+                    window.location.href = items[selectedIndex].href;
+                }
             }
         });
     }

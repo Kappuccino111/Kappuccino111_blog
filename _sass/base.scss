@@ -581,11 +581,14 @@ img {
   border-bottom: none;
 }
 
-.search-result-item:hover {
+.search-result-item:hover,
+.search-result-item.keyboard-selected {
   background-color: $bg-color;
+  text-decoration: none;
 }
 
-.search-result-item:hover .search-result-title {
+.search-result-item:hover .search-result-title,
+.search-result-item.keyboard-selected .search-result-title {
   color: $hover-color;
 }
 
