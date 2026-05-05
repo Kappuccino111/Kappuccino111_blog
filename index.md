@@ -40,19 +40,25 @@ title: whoami
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 </pre>
 <br>
-<div class= "check"> linux forever. apple sometimes.</div>
+<div class= "check">linux by default. apple by design.</div>
 </div>
 
 ## My place in the Internet Archive
 
-This is a brain dump. Notes, code, half-baked ideas, and whatever else has accumulated while working through software and firmware problems. It’s written primarily for myself, not for onboarding or marketing.
+**Hey, Welcome 👋**
 
-You will also occasionally find travel logs or photos mixed in. Think of them as noise in the signal: ignorable and optional. If you find something useful, good. If not, that’s fine too.
+This is where I keep my ideas: notes, code, half-baked solutions, and whatever else that accumulates when you spend time tinkering with interesting problems. I write mainly to understand things better and see them from a different angle, but feel free to look around.
 
-If you are here looking for a job posting, don’t bother. I am not recruiting.
+> "If you speak systems, this is non-volatile memory: data, persisted across power cycles."
 
-If you have a real technical problem, a non-trivial project, or something genuinely interesting that overlaps with what I do, you know how to reach me. Be precise. Have constraints. Skip the fluff.
+You will also find the occasional travel post with photos mixed in. I love documenting my journeys.
 
-Head over to the [archive]({{ site.baseurl }}/archive/) if you want to browse articles, projects, notes, and whatever else ended up preserved here.
+If you have a real technical problem, a non-trivial project, or something genuinely interesting that overlaps with what I do, I would love to hear from you. Reach me via the mail button at the bottom. The more precise and grounded, the better (because I am a human being).
+
+Head over to the [archive]({{ site.baseurl }}/archive/) to browse articles, projects, notes, and whatever else ended up preserved here.
+
+If you find something useful here, I am glad that I could help.
 
 `Happy Exploring :)`
+
+*Kappuccino111*
