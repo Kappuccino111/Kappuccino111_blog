@@ -2,11 +2,8 @@
     <h1>root@kappuccino111:~$<span class="caret"></span></h1>
 
     <nav>
-        <ul>
-            <li><a href="{{ site.baseurl }}/" {% if page.url=="/" or page.url=="/index.html" %}class="active" {% endif
-                    %}>whoami</a></li>
-            <li><a href="{{ site.baseurl }}/archive/" {% if page.url contains "/archive/" or page.collection=="articles"
-                    %}class="active" {% endif %}>archive</a></li>
-        </ul>
+        <a href="{{ site.baseurl }}/" {% if page.url=="/" or page.url=="/index.html" %}class="active" {% endif %}>whoami</a>
+        <a href="{{ site.baseurl }}/archive/" {% if page.url contains "/archive/" or page.collection=="articles" %}class="active" {% endif %}>archive</a>
+        <a href="#" class="search-trigger" id="search-trigger">search</a>
     </nav>
 </header>

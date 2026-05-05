@@ -105,15 +105,13 @@ header h1:hover {
   }
 }
 
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+nav {
   display: flex;
-}
-
-nav li {
-  margin-right: 20px;
+  align-items: center;
+  justify-content: flex-end;
+  flex: 1;
+  margin-left: 20px;
+  gap: 20px;
 }
 
 nav a {
@@ -462,4 +460,226 @@ img {
   height: auto;
   margin: 0 auto;
   border: 1px solid $accent-color;
+}
+
+// Search Trigger
+.search-trigger {
+  font-size: 1.2em;
+}
+
+// Search Modal Overlay
+.search-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  z-index: 10000;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 15vh;
+  backdrop-filter: blur(4px);
+}
+
+.search-modal.active {
+  display: flex;
+}
+
+// Modal Content Box
+.search-modal-content {
+  background-color: $header-bg;
+  border: 2px solid $border-color;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 600px;
+  max-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 30px rgba(255, 215, 0, 0.2);
+  animation: modalSlideIn 0.2s ease-out;
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Modal Header with Input
+.search-modal-header {
+  display: flex;
+  align-items: center;
+  padding: 16px 20px;
+  border-bottom: 1px solid #333;
+  gap: 12px;
+}
+
+.search-modal-header i.fa-magnifying-glass {
+  color: $accent-color;
+  font-size: 1.2em;
+}
+
+#search-input {
+  flex: 1;
+  background: none;
+  border: none;
+  color: $text-color;
+  font-family: 'Fira Code', monospace;
+  font-size: 1.1em;
+  outline: none;
+}
+
+#search-input::placeholder {
+  color: #7f8c98;
+}
+
+.search-close {
+  background: none;
+  border: none;
+  color: $text-color;
+  font-size: 1.2em;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.search-close:hover {
+  color: $hover-color;
+  background-color: #000000;
+}
+
+// Results Area
+.search-results {
+  flex: 1;
+  overflow-y: auto;
+  display: none;
+  padding: 8px 0;
+}
+
+.search-results.has-results {
+  display: block;
+}
+
+// Result Items
+.search-result-item {
+  display: block;
+  padding: 12px 20px;
+  border-bottom: 1px solid #333;
+  text-decoration: none;
+  transition: background-color 0.15s ease;
+}
+
+.search-result-item:last-child {
+  border-bottom: none;
+}
+
+.search-result-item:hover {
+  background-color: $bg-color;
+}
+
+.search-result-item:hover .search-result-title {
+  color: $hover-color;
+}
+
+.search-result-title {
+  color: $text-color;
+  font-weight: 500;
+  margin-bottom: 4px;
+  font-size: 0.95em;
+}
+
+.search-result-meta {
+  display: flex;
+  gap: 12px;
+  font-size: 0.8em;
+}
+
+.search-result-date {
+  color: #7f8c98;
+}
+
+.search-result-title mark {
+  background-color: $accent-color;
+  color: $bg-color;
+  padding: 0 3px;
+  border-radius: 2px;
+  font-weight: bold;
+}
+
+// No Results State
+.search-no-results {
+  padding: 40px 20px;
+  text-align: center;
+  color: #7f8c98;
+}
+
+.search-no-results i {
+  font-size: 2em;
+  margin-bottom: 12px;
+  display: block;
+  color: $accent-color;
+}
+
+.search-no-results p {
+  margin: 0;
+  font-style: italic;
+}
+
+.search-no-results strong {
+  color: $text-color;
+  font-style: normal;
+}
+
+// Modal Footer
+.search-modal-footer {
+  padding: 10px 20px;
+  border-top: 1px solid #333;
+  text-align: center;
+}
+
+.search-hint {
+  color: #7f8c98;
+  font-size: 0.8em;
+}
+
+.search-hint kbd {
+  background-color: $bg-color;
+  border: 1px solid #555;
+  border-radius: 3px;
+  padding: 2px 6px;
+  font-family: 'Fira Code', monospace;
+  font-size: 0.9em;
+  color: $text-color;
+}
+
+// Mobile responsiveness
+@media (max-width: 768px) {
+  .search-modal {
+    padding-top: 10vh;
+  }
+
+  .search-modal-content {
+    width: 95%;
+    max-height: 80vh;
+  }
+
+  .search-modal-header {
+    padding: 12px 16px;
+  }
+
+  #search-input {
+    font-size: 1em;
+  }
+
+  .search-result-item {
+    padding: 10px 16px;
+  }
 }
