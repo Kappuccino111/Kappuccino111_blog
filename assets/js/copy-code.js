@@ -19,7 +19,7 @@
 
                 navigator.clipboard.writeText(text).then(function() {
                     button.classList.add('copied');
-                    button.innerHTML = '<i class="fa-solid fa-check"></i>';
+                    button.innerHTML = '<i class="fa-solid fa-check"></i><span class="copy-label">Copied</span>';
                     button.setAttribute('aria-label', 'Copied!');
                     button.setAttribute('title', 'Copied!');
 

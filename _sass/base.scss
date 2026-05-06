@@ -3,7 +3,7 @@ $header-bg: #252526;
 $text-color: #f0e68c;
 $accent-color: #ffd700;
 $border-color: #ffd700;
-$code-bg: #121212;
+$code-bg: #282c34;
 $link-color: #ffd700;
 $hover-color: #ffffff;
 
@@ -246,26 +246,34 @@ code {
 
 .highlight {
   background-color: $code-bg;
+  color: #f8f8f2;
   border-radius: 10px;
   padding: 16px;
-  overflow: auto;
+  overflow-x: auto;
+  overflow-y: auto;
+  max-height: 500px;
   position: relative;
 }
 
 .copy-code-button {
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 8px;
+  right: 8px;
   background-color: $code-bg;
   border: 1px solid #444;
   border-radius: 6px;
   color: #7f8c98;
   padding: 4px 8px;
   font-size: 0.8em;
+  font-family: 'Fira Code', monospace;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: opacity 0.25s ease, color 0.25s ease, border-color 0.25s ease, background-color 0.25s ease, transform 0.15s ease;
   opacity: 0;
   z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  white-space: nowrap;
 }
 
 .highlight:hover .copy-code-button,
@@ -279,10 +287,31 @@ code {
   background-color: rgba(255, 215, 0, 0.1);
 }
 
+.copy-code-button:active {
+  transform: scale(0.95);
+}
+
 .copy-code-button.copied {
   color: #a6e22e;
   border-color: #a6e22e;
   opacity: 1;
+  animation: copyPop 0.3s ease;
+}
+
+.copy-label {
+  font-size: 0.85em;
+}
+
+@keyframes copyPop {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .highlight pre {
@@ -296,117 +325,9 @@ code {
   background: none;
   border: 0;
   padding: 0;
-  color: #abb2bf;
-  font-weight: bold;
 }
 
-.highlight .highlight {
-  background-color: #282c34;
-  border-radius: 3px;
-}
 
-.highlight .c {
-  color: #7f8c98;
-  font-weight: bold;
-}
-
-.highlight .err {
-  color: #ff6b6b;
-  background-color: #3e4451;
-  font-weight: bold;
-}
-
-.highlight .k,
-.highlight .o,
-.highlight .kc,
-.highlight .kd,
-.highlight .kp,
-.highlight .kn,
-.highlight .kr,
-.highlight .kt,
-.highlight .ow {
-  color: #d284f2;
-  font-weight: bold;
-}
-
-.highlight .cm,
-.highlight .c1 {
-  color: #7f8c98;
-  font-weight: bold;
-}
-
-.highlight .cp,
-.highlight .cs,
-.highlight .gh,
-.highlight .se {
-  color: #79b8ff;
-  font-weight: bold;
-}
-
-.highlight .gd,
-.highlight .gr,
-.highlight .gt,
-.highlight .nt {
-  color: #ff6b6b;
-  background-color: #3e4451;
-  font-weight: bold;
-}
-
-.highlight .gi {
-  color: #a6e22e;
-  background-color: #3e4451;
-  font-weight: bold;
-}
-
-.highlight .ge {
-  font-style: italic;
-}
-
-.highlight .m,
-.highlight .mf,
-.highlight .mh,
-.highlight .mi,
-.highlight .mo,
-.highlight .il {
-  color: #e5a07b;
-  font-weight: bold;
-}
-
-.highlight .s,
-.highlight .sb,
-.highlight .sc,
-.highlight .sd,
-.highlight .s2,
-.highlight .sh,
-.highlight .si,
-.highlight .sx,
-.highlight .sr,
-.highlight .s1,
-.highlight .ss {
-  color: #b6e292;
-  font-weight: bold;
-}
-
-.highlight .na,
-.highlight .nc,
-.highlight .no,
-.highlight .ne,
-.highlight .nf,
-.highlight .nn,
-.highlight .nv,
-.highlight .bp,
-.highlight .vc,
-.highlight .vg,
-.highlight .vi,
-.highlight .vm {
-  color: #ffd700;
-  font-weight: bold;
-}
-
-.highlight .w {
-  color: #ffffff;
-  font-weight: bold;
-}
 
 
 h1 {
