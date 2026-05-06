@@ -249,6 +249,40 @@ code {
   border-radius: 10px;
   padding: 16px;
   overflow: auto;
+  position: relative;
+}
+
+.copy-code-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: $code-bg;
+  border: 1px solid #444;
+  border-radius: 6px;
+  color: #7f8c98;
+  padding: 4px 8px;
+  font-size: 0.8em;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  opacity: 0;
+  z-index: 10;
+}
+
+.highlight:hover .copy-code-button,
+.copy-code-button:focus {
+  opacity: 1;
+}
+
+.copy-code-button:hover {
+  color: $accent-color;
+  border-color: $accent-color;
+  background-color: rgba(255, 215, 0, 0.1);
+}
+
+.copy-code-button.copied {
+  color: #a6e22e;
+  border-color: #a6e22e;
+  opacity: 1;
 }
 
 .highlight pre {
