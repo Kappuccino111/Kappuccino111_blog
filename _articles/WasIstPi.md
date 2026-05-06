@@ -562,9 +562,8 @@ Everything I need, nothing I don't. No features I will never use.
 
 ## Resources
 
-- [Pi Documentation](https://pi.dev)
-- [Extensions Guide](https://github.com/badlogic/pi-mono/blob/main/docs/extensions.md)
-- [Example Extensions](https://github.com/badlogic/pi-mono/tree/main/examples/extensions)
+- [Pi Documentation](https://pi.dev/docs/latest)
+- [Extensions Guide](https://pi.dev/docs/latest/extensions)
 - [Mario's Blog](https://mariozechner.at)
 
 Have questions? Just ask Pi ... it's pretty good at explaining itself.
